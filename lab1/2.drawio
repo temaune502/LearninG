@@ -1,0 +1,110 @@
+<mxfile host="Electron">
+  <diagram name="Variant_23_Flowchart" id="0">
+    <mxGraphModel dx="2046" dy="894" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;" value="Початок" vertex="1">
+          <mxGeometry height="50" width="120" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="input" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Введення: t, a" vertex="1">
+          <mxGeometry height="50" width="150" x="325" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" target="input">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cond1" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="t² - 0.5 ≥ 0 ?" vertex="1">
+          <mxGeometry height="80" width="160" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="input" target="cond1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="err1" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Вивід: &quot;Помилка: t² - 0.5 &lt; 0&quot;" vertex="1">
+          <mxGeometry height="50" width="200" x="511" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond1_no" edge="1" parent="1" source="cond1" target="err1" value="Ні">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="end_err1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;" value="Кінець" vertex="1">
+          <mxGeometry height="50" width="100" x="728" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="e_err1_end" edge="1" parent="1" source="err1" target="end_err1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="proc1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="x = √(t² - 0.5)&#xa;y = sin(π/2 * x)" vertex="1">
+          <mxGeometry height="60" width="160" x="320" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond1_yes" edge="1" parent="1" source="cond1" target="proc1" value="Так">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cond2" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="y ≤ a ?" vertex="1">
+          <mxGeometry height="80" width="140" x="330" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="proc1" target="cond2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cond3" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="1 - 2*sin(x) ≥ 0 ?" vertex="1">
+          <mxGeometry height="80" width="160" x="178" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond2_yes" edge="1" parent="1" source="cond2" target="cond3" value="Так">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="err2" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Вивід: &quot;Помилка: 1 - 2*sin(x) &lt; 0&quot;" vertex="1">
+          <mxGeometry height="50" width="150" x="4" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond3_no" edge="1" parent="1" source="cond3" target="err2" value="Ні">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="end_err2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;" value="Кінець" vertex="1">
+          <mxGeometry height="50" width="100" x="25" y="544" as="geometry" />
+        </mxCell>
+        <mxCell id="e_err2_end" edge="1" parent="1" source="err2" target="end_err2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_v1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="v = y + x * √(1 - 2*sin(x))" vertex="1">
+          <mxGeometry height="60" width="160" x="180" y="573" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond3_yes" edge="1" parent="1" source="cond3" target="proc_v1" value="Так">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="proc_v2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="v = 3 * ln(1 + e^y)" vertex="1">
+          <mxGeometry height="60" width="160" x="470" y="455" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cond2_no" edge="1" parent="1" source="cond2" target="proc_v2" value="Ні">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="440" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="output" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Вивід: x, y, v" vertex="1">
+          <mxGeometry height="50" width="150" x="335" y="639" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v1_out" edge="1" parent="1" source="proc_v1" target="output">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="669" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_v2_out" edge="1" parent="1" source="proc_v2" target="output">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="664" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="end_main" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontStyle=1;" value="Кінець" vertex="1">
+          <mxGeometry height="50" width="120" x="350" y="724" as="geometry" />
+        </mxCell>
+        <mxCell id="e_out_end" edge="1" parent="1" source="output" target="end_main">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

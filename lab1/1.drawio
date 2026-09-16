@@ -1,0 +1,39 @@
+<mxfile host="Electron">
+  <diagram name="Сторінка-1" id="yufFL15Hmm6bNcwpCiNl">
+    <mxGraphModel dx="860" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-5" edge="1" parent="1" source="ogqObisBVwfZqVZ_-Ut4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.492;entryY=0.15;entryDx=0;entryDy=0;entryPerimeter=0;" target="ogqObisBVwfZqVZ_-Ut4-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="320" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Початок" vertex="1">
+          <mxGeometry height="50" width="180" x="230" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-7" edge="1" parent="1" source="ogqObisBVwfZqVZ_-Ut4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ogqObisBVwfZqVZ_-Ut4-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-3" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="L" vertex="1">
+          <mxGeometry height="40" width="120" x="260" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-9" edge="1" parent="1" source="ogqObisBVwfZqVZ_-Ut4-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ogqObisBVwfZqVZ_-Ut4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="L_мм = L * 1000&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;Yards = L_мм / 914.4&lt;br&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; Feet = L_мм / 304.8&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="180" x="230" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-11" edge="1" parent="1" source="ogqObisBVwfZqVZ_-Ut4-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ogqObisBVwfZqVZ_-Ut4-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-8" parent="1" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" value="Yards, Feet" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="ogqObisBVwfZqVZ_-Ut4-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Кінець" vertex="1">
+          <mxGeometry height="40" width="120" x="260" y="400" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,1 @@
+g++ -Wall -Wextra -pedantic -pipe -static -static-libgcc -s -ggdb -O0 main.cpp -o main
