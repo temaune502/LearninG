@@ -1,0 +1,110 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="lab3_flowchart" name="Блок-схема Лаб 3">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="start" value="Початок" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="40" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="input" value="Введення a (int), b (double)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="110" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" edge="1" parent="1" source="start" target="input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="calc" value="intRes = a + (int)b / 2&#10;doubleRes = a + b / 2.0" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="190" width="220" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" edge="1" parent="1" source="input" target="calc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cond1" value="intRes == doubleRes?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="280" width="180" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3" edge="1" parent="1" source="calc" target="cond1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="out1" value="Вивід: Співпадають" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="150" y="390" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="out2" value="Вивід: НЕ співпадають" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="390" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" value="Так" edge="1" parent="1" source="cond1" target="out1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e5" value="Ні" edge="1" parent="1" source="cond1" target="out2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cast" value="implicitA = b&#10;explicitB = (double)a" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="280" y="480" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e6" edge="1" parent="1" source="out1" target="cast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e7" edge="1" parent="1" source="out2" target="cast" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="cond2" value="implicitA != b?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="570" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e8" edge="1" parent="1" source="cast" target="cond2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="out3" value="Вивід: Відбулося&#10;обрізання даних" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="680" width="170" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="out4" value="Вивід: Обрізання&#10;не відбулося" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="450" y="680" width="170" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e9" value="Так" edge="1" parent="1" source="cond2" target="out3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e10" value="Ні" edge="1" parent="1" source="cond2" target="out4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="out5" value="Вивід: sizeof(a), sizeof(b)&#10;та адреси &amp;a, &amp;b" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="770" width="220" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e11" edge="1" parent="1" source="out3" target="out5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e12" edge="1" parent="1" source="out4" target="out5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="end" value="Кінець" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="850" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e13" edge="1" parent="1" source="out5" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
