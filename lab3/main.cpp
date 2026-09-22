@@ -23,11 +23,11 @@ int main()
     print("Завдання 1");
     print("Будь ласка введіть а та б\n");
     
-    // int a = 0;
-    // double b = 0.0;
-    int a = 12;
-    double b = 44.3335;
-    // scanf("%d %lf", &a, &b);
+    int a = 0;
+    double b = 0.0;
+    // int a = 12;
+    // double b = 44.3335;
+    scanf("%d %lf", &a, &b);
     
     print("Завдання 2");
     
@@ -80,8 +80,8 @@ int main()
     print("");
     print("Завдання 8");
 
-    print("Адреса змінної a: 0x%p", &a);
-    print("Адреса змінної b: 0x%p", &b);
+    print("Адреса змінної a: 0x%p", (void*)&a);
+    print("Адреса змінної b: 0x%p", (void*)&b);
 
     return 0;
 

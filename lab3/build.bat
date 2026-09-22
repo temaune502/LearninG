@@ -1,2 +1,2 @@
-clang++ -Wall -Wextra  -pipe -ggdb main.cpp -o main 
-main.exe
+g++ -Wall -Wextra -pedantic  -pipe -ggdb main.cpp -o main 
+@REM  main.exe
