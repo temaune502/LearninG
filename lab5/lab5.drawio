@@ -1,0 +1,156 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Лабораторна 6 - Варіант 14">
+    <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Початок -->
+        <mxCell id="start" value="Початок" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="40" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Введення -->
+        <mxCell id="input" value="Введення x, k" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="120" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_start_in" edge="1" parent="1" source="start" target="input" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Перевірка k = 1 -->
+        <mxCell id="dec_k1" value="k == 1 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_in_k1" edge="1" parent="1" source="input" target="dec_k1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Перевірка x < 0 для кореня -->
+        <mxCell id="dec_sqrt" value="x &lt; 0 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="200" width="120" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k1_yes" value="Так" edge="1" parent="1" source="dec_k1" target="dec_sqrt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Вивід помилки від'ємного кореня -->
+        <mxCell id="out_err_sqrt" value="Вивід: &quot;Помилка x &lt; 0&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="150" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_sqrt_yes" value="Так" edge="1" parent="1" source="dec_sqrt" target="out_err_sqrt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Обчислення та вивід sqrt -->
+        <mxCell id="out_sqrt" value="Вивід: sqrt(x)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_sqrt_no" value="Ні" edge="1" parent="1" source="dec_sqrt" target="out_sqrt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Перевірка k = 2 -->
+        <mxCell id="dec_k2" value="k == 2 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="310" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k1_no" value="Ні" edge="1" parent="1" source="dec_k1" target="dec_k2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Вивід x * x -->
+        <mxCell id="out_sqr" value="Вивід: x * x" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="320" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k2_yes" value="Так" edge="1" parent="1" source="dec_k2" target="out_sqr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Перевірка k = 3 -->
+        <mxCell id="dec_k3" value="k == 3 ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="420" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k2_no" value="Ні" edge="1" parent="1" source="dec_k2" target="dec_k3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Вивід exp(x) -->
+        <mxCell id="out_exp" value="Вивід: exp(x)" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="540" y="430" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k3_yes" value="Так" edge="1" parent="1" source="dec_k3" target="out_exp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Вивід помилки невідомого коду -->
+        <mxCell id="out_err_k" value="Вивід: &quot;Невідомий код&quot;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="430" width="180" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e_k3_no" value="Ні" edge="1" parent="1" source="dec_k3" target="out_err_k" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Кінець -->
+        <mxCell id="end" value="Кінець" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="540" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- З'єднання всіх гілок виводу з Кінцем -->
+        <mxCell id="e_out1" edge="1" parent="1" source="out_err_sqrt" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="175" />
+              <mxPoint x="890" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_out2" edge="1" parent="1" source="out_sqrt" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="265" />
+              <mxPoint x="870" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_out3" edge="1" parent="1" source="out_sqr" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="850" y="345" />
+              <mxPoint x="850" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_out4" edge="1" parent="1" source="out_exp" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="830" y="455" />
+              <mxPoint x="830" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e_out5" edge="1" parent="1" source="out_err_k" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
